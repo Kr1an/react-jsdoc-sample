@@ -31,8 +31,9 @@ import { compose, withState, withProps } from 'recompose'
 
 /** @param {Props} props */
 const Switcher = props => (
-    <pre onClick={() => props.handleSwitherClick()} dangerouslySetInnerHTML={{
-        __html: props.isOn ? `
+    <pre onClick={() => props.handleSwitherClick()}>
+        {
+            props.isOn ? `
 
 #|
 #|_
@@ -54,8 +55,9 @@ const Switcher = props => (
 #|_|
 #|
 #|
-        `
-    }} />
+            `
+        }
+    </pre>
 )
 
 // Here is IMPORTANT note:

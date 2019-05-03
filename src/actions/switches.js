@@ -8,6 +8,7 @@ export const reset = createAction()
 
 // Create actions with context-via-arguments with
 // template types of redux-act
+// Linter will expect action to receive one {number} argument
 
 /** @type {import('redux-act').ActionCreator1<number, number, {}>} */
 export const buildNLightSwitches = createAction()
